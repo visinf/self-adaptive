@@ -22,7 +22,7 @@ and [Stefan Roth](https://www.visinf.tu-darmstadt.de/visual_inference/people_vi/
 <td>
 <i>Self-adaptation</i> adjusts only the inference process, while standard regularization is employed during network training.
 Given a single unlabeled test sample as the input, self-adaptation customizes the parameters of convolutional and Batch Normalization layers, before producing the output for that sample.
-Self-adaptation significantly improves out-of-distribution generalization and sets new state-of-the-art accuracy on multi-domain benchmarks.
+Self-adaptation significantly improves out-of-distribution generalization of deep networks and sets new state-of-the-art accuracy on multi-domain benchmarks.
 <br><br><br><br><br><br><br><br><br><br>
 </td>
 </tr>
