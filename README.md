@@ -1,3 +1,9 @@
+<style>
+td, th {
+   border: none!important;
+}
+</style>
+
 # Semantic Self-adaptation: Enhancing Generalization with a Single Sample
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -15,7 +21,18 @@ and [Stefan Roth](https://www.visinf.tu-darmstadt.de/visual_inference/people_vi/
 
 *equal contribution, [[arXiv](https://arxiv.org)]
 
-<img src="assets/main.gif" width="384" height="384"/>
+
+<table>
+<tr>
+<td><img src="assets/main.gif" width="384" height="384"/></td>
+<td>
+<i>Self-adaptation</i> adjusts only the inference process, while standard regularization is employed during network training.
+Given a single unlabeled test sample as the input, self-adaptation customizes the parameters of convolutional and Batch Normalization layers, before producing the output for that sample.
+Self-adaptation significantly outperforms strong baselines and sets new state-of-the-art accuracy on multi-domain benchmarks.
+<br><br><br><br><br><br><br><br><br><br>
+</td>
+</tr>
+</table>
 
 ## Installation
 This project was originally developed with Python 3.8, PyTorch 1.9, and CUDA 11.0. The training with DeepLabv1 ResNet50 requires 
