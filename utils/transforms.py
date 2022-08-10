@@ -207,7 +207,7 @@ class ColorJitter:
             img = self.jitter(img)
         return img, gt
 
-class MaskGreyscale:
+class MaskGrayscale:
 
     def __init__(self, percentage: float = 0.1):
         self.percentage = percentage

@@ -41,7 +41,7 @@ def main(opts):
                                        tta=opts.tta,
                                        flips=opts.flips,
                                        scales=opts.scales,
-                                       greyscale=opts.greyscale)
+                                       grayscale=opts.grayscale)
     test_loader = DataLoader(test_dataset,
                              batch_size=opts.batch_size,
                              shuffle=False,

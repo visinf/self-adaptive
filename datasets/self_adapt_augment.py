@@ -24,7 +24,7 @@ class TrainTestAugDataset:
                  flip_all_augs: bool = False,
                  flips: bool = True,
                  scales: list = [1.0],
-                 greyscale: bool = False,
+                 grayscale: bool = False,
                  colorjitter: bool = False,
                  gaussblur: bool = False,
                  rotation: bool = False,
@@ -50,7 +50,7 @@ class TrainTestAugDataset:
         self.scales = scales
         self.flip_all_augs = flip_all_augs
         self.flips = flips
-        self.greyscale = greyscale
+        self.grayscale = grayscale
         self.colorjitter = colorjitter
         self.gaussblur = gaussblur
         self.rotation = rotation
@@ -59,7 +59,7 @@ class TrainTestAugDataset:
         self.gauss_radius = gauss_radius
         self.augs = [None]
         if self.flips: self.augs.append("flip")
-        if self.greyscale: self.augs.append("grey")
+        if self.grayscale: self.augs.append("gray")
         if self.colorjitter: self.augs.append("jitter")
         if self.gaussblur: self.augs.append("gauss")
         if self.rotation: self.augs.append("rot")
@@ -91,7 +91,7 @@ class TrainTestAugDataset:
                 crop_img = image.resize((w, h), Image.BILINEAR)
 
                 # Additional augmentations on every duplicate of the scale
-                flip_action, rot_action, grey_action, jitter_action, gauss_action = False, False, False, False, False
+                flip_action, rot_action, gray_action, jitter_action, gauss_action = False, False, False, False, False
                 if self.flip_all_augs and idx != 0:
                     flip_action = True
                     crop_img = F.hflip(crop_img)
@@ -112,8 +112,8 @@ class TrainTestAugDataset:
                     if self.gaussblur:
                         gauss_action = True
                         crop_img = crop_img.filter(ImageFilter.GaussianBlur(self.gauss_radius))
-                    if self.greyscale:
-                        grey_action = True
+                    if self.grayscale:
+                        gray_action = True
                         crop_img = F.to_grayscale(crop_img, num_output_channels=3)
 
                 if not self.combined_augmentation:
@@ -132,13 +132,13 @@ class TrainTestAugDataset:
                     if aug == "gauss":
                         gauss_action = True
                         crop_img = crop_img.filter(ImageFilter.GaussianBlur(self.gauss_radius))
-                    if aug == "grey":
-                        grey_action = True
+                    if aug == "gray":
+                        gray_action = True
                         crop_img = F.to_grayscale(crop_img, num_output_channels=3)
 
                 crop_img, _ = trans(crop_img, crop_img)
                 transforms_list.append((i, j, w, h, flip_action, rot_action,
-                                        self.rot_angle, grey_action, jitter_action, gauss_action))
+                                        self.rot_angle, gray_action, jitter_action, gauss_action))
                 crop_imgs.append(crop_img)
 
         image, target = trans(image, target)
@@ -164,7 +164,7 @@ class TrainTestAugDataset:
         num_classes = crops_soft[0].shape[1]
         crops_soft_all = torch.ones(len(crops_soft), num_classes, *out_shape[-2:]) * self.ignore_index
         for crop_idx, (crop_soft, crop_transform) in enumerate(zip(crops_soft, crop_transforms)):
-            i, j, h, w, flip_action, rot_action, rot_angle, grey_action, jitter_action, gauss_action = crop_transform
+            i, j, h, w, flip_action, rot_action, rot_angle, gray_action, jitter_action, gauss_action = crop_transform
 
             # Reaugment Images
             if rot_action:

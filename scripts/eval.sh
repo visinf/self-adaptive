@@ -30,7 +30,7 @@ python -W ignore eval.py \
 --num-classes 19 \
 --tta \
 --flips \
---greyscale \
+--grayscale \
 --batch-size 1 \
 --scales 0.25 0.5 0.75
 
@@ -48,6 +48,6 @@ python -W ignore eval.py \
 --base-lr 0.05 \
 --num-epochs 10 \
 --flips \
---greyscale \
+--grayscale \
 --weight-decay 0.0 \
 --momentum 0.0

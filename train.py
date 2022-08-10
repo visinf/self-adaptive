@@ -54,7 +54,7 @@ def train(gpu: int,
                                            transforms.RandomHFlip(),
                                            transforms.RandGaussianBlur(),
                                            transforms.ColorJitter(),
-                                           transforms.MaskGreyscale(),
+                                           transforms.MaskGrayscale(),
                                            transforms.ToTensor(),
                                            transforms.IdsToTrainIds(source=target_train, target=target_train),
                                            transforms.Normalize()])

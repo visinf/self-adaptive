@@ -86,9 +86,9 @@ For performing Test-Time Augmentation, replace ```--only-inf``` with ```--tta```
 - ```--batch-size```: Use a single sample from the validation set to generate augmented batch (default:```1```).
 - ```--scales```: Defines scaling ratio (default: ```0.25 0.5 0.75```).
 - ```--flips```: Add a flipped image for all scales.
-- ```--greyscale```: Add a grayscaled image for all scales.
+- ```--grayscale```: Add a grayscaled image for all scales.
 ```
-python eval.py --dataset-root DATASET-ROOT --source [gta|synthia] --checkpoints-root CHECKPOINT-ROOT --checkpoint CHECKPOINT --backbone-name [resnet50|resnet101] --num-classes [19|16] --tta --flips --greyscale --batch-size 1 --scales 0.25 0.5 0.75 --num-workers 8
+python eval.py --dataset-root DATASET-ROOT --source [gta|synthia] --checkpoints-root CHECKPOINT-ROOT --checkpoint CHECKPOINT --backbone-name [resnet50|resnet101] --num-classes [19|16] --tta --flips --grayscale --batch-size 1 --scales 0.25 0.5 0.75 --num-workers 8
 ```
 ### Self-adaptation
 During self-adaptation, we use the augmented batch to update our model for a specified number of epochs before making the final prediction. After processing one test sample, the model is reset to its state from training.
@@ -102,7 +102,7 @@ To performs self-adaptation, add following parameters to the previously mentione
 - ```--hrnet-layers```: Layers 1, 2 and/or 3 which will be frozen for self-adaptation (default: ```1 2```)
 
 ```
-python eval.py --dataset-root DATASET-ROOT --source [gta|synthia] --checkpoints-root CHECKPOINT-ROOT --checkpoint CHECKPOINT --backbone-name [resnet50|resnet101] --num-classes [19|16] --batch-size 1 --scales 0.25 0.5 0.75 --threshold 0.7 --base-lr 0.05 --num-epochs 10 --flips --greyscale --num-workers 8 --weight-decay 0.0 --momentum 0.0
+python eval.py --dataset-root DATASET-ROOT --source [gta|synthia] --checkpoints-root CHECKPOINT-ROOT --checkpoint CHECKPOINT --backbone-name [resnet50|resnet101] --num-classes [19|16] --batch-size 1 --scales 0.25 0.5 0.75 --threshold 0.7 --base-lr 0.05 --num-epochs 10 --flips --grayscale --num-workers 8 --weight-decay 0.0 --momentum 0.0
 ```
 
 ## Results

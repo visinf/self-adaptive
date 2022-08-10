@@ -40,7 +40,7 @@ def val_parser():
     parser.add_argument("--only-inf", action="store_true")
     parser.add_argument("--scales", nargs="+", type=float, default=[0.25, 0.5, 0.75])
     parser.add_argument("--flips", action="store_true", help="Apply augmentation flip to all images")
-    parser.add_argument("--greyscale",action="store_true", help="Apply greyscaling for Self-adaptation")
+    parser.add_argument("--grayscale",action="store_true", help="Apply grayscaling for Self-adaptation")
     parser.add_argument("--calibration", action="store_true", help="Compute calibration during inference")
     parser.add_argument("--resnet-layers", nargs="+", type=int, default=[1, 2], help="1, 2, 3 and/or 4 which will be frozen for Self-adaptation")
     parser.add_argument("--hrnet-layers", nargs="+", type=int, default=[1, 2], help="1, 2 and/or 3 which will be frozen for Self-adaptation")
