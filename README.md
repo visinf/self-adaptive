@@ -16,17 +16,11 @@ and [Stefan Roth](https://www.visinf.tu-darmstadt.de/visual_inference/people_vi/
 *equal contribution, [[arXiv](https://arxiv.org)]
 
 
-<table>
-<tr>
-<td><img src="assets/main.gif" width="384" height="384"/></td>
-<td>
-<i>Self-adaptation</i> adjusts only the inference process, while standard regularization is employed during network training.
-Given a single unlabeled test sample as the input, self-adaptation customizes the parameters of convolutional and Batch Normalization layers, before producing the output for that sample.
-Self-adaptation significantly improves out-of-distribution generalization of deep networks and sets new state-of-the-art accuracy on multi-domain benchmarks.
-<br><br><br><br><br><br><br><br><br><br>
-</td>
-</tr>
-</table>
+**TLDR;**
+<i>Self-adaptation</i> adjusts only the inference process, while standard regularization is employed during network training. Given a single unlabeled test sample as the input, self-adaptation customizes the parameters of convolutional and Batch Normalization
+layers, before producing the output for that sample. Self-adaptation significantly improves out-of-distribution generalization of deep networks and sets new state-of-the-art accuracy on multi-domain benchmarks.
+
+<img src="assets/main.gif" width="448" />
 
 ## Installation
 This project was originally developed with Python 3.8, PyTorch 1.9, and CUDA 11.0. The training with DeepLabv1 ResNet50 requires 
