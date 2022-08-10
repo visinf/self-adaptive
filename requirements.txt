@@ -1,0 +1,6 @@
+yacs
+tqdm
+imageio
+cityscapesscripts
+pillow==8.4.0
+scipy
