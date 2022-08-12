@@ -13,7 +13,7 @@ This repository contains the official implementation of our paper:
 [Daniel Cremers](https://vision.in.tum.de/members/cremers),
 and [Stefan Roth](https://www.visinf.tu-darmstadt.de/visual_inference/people_vi/stefan_roth.en.jsp)<br>
 
-*equal contribution, [[arXiv](https://arxiv.org)]
+*equal contribution, [[arXiv](https://arxiv.org/abs/2208.05788)]
 
 
 **TLDR;**
