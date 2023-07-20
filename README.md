@@ -127,3 +127,14 @@ Our method achieves the following IoU for:
 |--------------|---------------|------------|--------|--------|-----------|--------------------|
 |*ResNet50*    | DeepLabv1     | 41.60%     | 33.35% | 31.22% | 41.21%    | [resnet50_synthia_alpha_0.1.pth](https://drive.google.com/uc?export=download&confirm=aOXz&id=1FJT5trJsr-6e2fnH-VLYcjQQ-ZjRzJAC)    |
 |*ResNet101*   | DeepLabv1     | 42.32%     | 33.27% | 31.40% | 41.20%    | [resnet101_synthia_alpha_0.1.pth](https://drive.google.com/uc?export=download&confirm=aOXz&id=11LI_IsCrJCsyZbRXKfpR3_d8NG0lq6tr)   |
+
+## Citation
+```
+@article{Bahmani:2023:SSA,
+  title={Semantic Self-adaptation: Enhancing Generalization with a Single Sample},
+  author={Sherwin Bahmani and Oliver Hahn and Eduard Zamfir and Nikita Araslanov and Daniel Cremers and Stefan Roth},
+  journal={Transactions on Machine Learning Research (TMLR)},
+  issn={2835-8856},
+  year={2023}
+}
+```
