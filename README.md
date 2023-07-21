@@ -13,7 +13,7 @@ This repository contains the official implementation of our paper:
 [Daniel Cremers](https://vision.in.tum.de/members/cremers),
 and [Stefan Roth](https://www.visinf.tu-darmstadt.de/visual_inference/people_vi/stefan_roth.en.jsp)<br>
 *equal contribution <br>
-**TMLR 2023**, [[OpenReview](https://openreview.net/forum?id=ILNqQhGbLx)] [[arXiv](https://arxiv.org/abs/2208.05788)]
+**TMLR 2023**, [[OpenReview](https://openreview.net/forum?id=ILNqQhGbLx)] [[arXiv](https://arxiv.org/abs/2208.05788)] [[Video](https://youtu.be/s4DG65ic0EA)]
 
 
 **TLDR;**
